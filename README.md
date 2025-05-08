@@ -6,12 +6,12 @@ This  repository contains the models, dataset, and experimental code mentioned i
 Although the naming of our directories and files already contains the necessary and brief information, we still provide details in the following table.
 | Directories | Description|
 | ----------- | ----------- |
-|1_Pipeline (IMPACT)| This folder contains a two-stage execution process in our pipeline, i.e., MM-bert is used for binary identifying, and then glm4 is used for 8-classifying. Among them, `pipeline_with_0shot.py` and `pipeline_with_fewshot.py` are the main entry files for the execution of the pipeline, which represent the zero-shot and few-shot execution processes, respectively. |
-| 2_MT-Text-CNN
-|3_Flan-T5
-|4_MT-MoE-BERT
-| 5_GLM-9B
-| Benchmark_new.csv | 
+|1_Pipeline (IMPACT)| This folder contains a two-stage execution process in our pipeline, i.e., MT-MoE-bert is used for binary identifying, and then glm4-9b-chat is used for 8-classifying. Among them, `pipeline_with_0shot.py` and `pipeline_with_fewshot.py` are the main entry files for the execution of the pipeline, which represent the zero-shot and few-shot execution processes, respectively. |
+| 2_MT-Text-CNN | This folder contains the fine-tuning and testing code of MT-Text-CNN. |
+|3_Flan-T5 | This folder contains the code for prompting Flan-T5-XXL and fine-tuning Flan-T5-XL.|
+|4_MT-MoE-BERT | This folder contains the necessary code for training MT-MoE-BERT to form the pipeline and finish the ablation contrast.|
+| 5_GLM-9B | This folder contains the configuration when fine-tuning GLM. |
+| Benchmark_new.csv | - |
 
 
 #### dataset and models
@@ -25,7 +25,3 @@ Although the naming of our directories and files already contains the necessary 
 | Model-MT-MoE-Bert | MT-BERT Model with MoE trained to apply in IMPACT to identify all SATD sentences into 2 categories (isSATD or nonSATD) | [pytorch_model16.bin](https://box.nju.edu.cn/f/a9455caeac9547159ff2/?dl=1) |
 | Model-MT-MoE-Bert-noMerge | Unmerged version of Model-MT-MoE-Bert. One of its roles is to serve as an ablative contrast, and the other is to be used directly to fine-tune the merge version. | [pytorch_model20.bin](https://box.nju.edu.cn/f/a9455caeac9547159ff2/?dl=1) |
 | Model-MT-Text-CNN | MT-CNN Model fine-tuned to identify all SATD sentences into 2 categories (isSATD or nonSATD) | [pytorch_model19.bin](https://box.nju.edu.cn/library/9b4776c1-af53-4cec-b7c6-60a33f918280/SATD-IMPACT/MT-Text-CNN) |
-
-#### code
-The following is an introduction to the code to make it easier for readers to use.
-> The files `main_pipeline_0shot.py` and `main_pipeline_fewshot.py` are the main files to run our pipeline. And The others are tools which used by the two files. The folder `bert_config` contents the related configuration of our bert model. The folder `train_bert` contents the training details of our bert model.
