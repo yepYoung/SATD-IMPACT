@@ -1,7 +1,19 @@
 # IMPACT: Identifying and Classifying Multiple Sourced and Categorized Self-Admitted Technical Debts
 ---
-This  repository contains the models, dataset and experimental code mentioned in the paper. Specifically, experimental code includes the implementation code of our pipeline and the process of training, the dataset includes the preprocessed complete dataset used for training and testing, and models includes our models in pipeline and RQ1-3.
+This  repository contains the models, dataset, and experimental code mentioned in the paper. Specifically, experimental code includes the implementation code of our pipeline (IMPACT) and the training process, the dataset includes the preprocessed complete dataset used for training and testing, and models include our models in the pipeline (IMPACT) and RQ1-3. 
 ---
+### 
+Although the naming of our directories and files already contains the necessary and brief information, we still provide details in the following table.
+| Directories | Description|
+| ----------- | ----------- |
+|1_Pipeline (IMPACT)| This folder contains a two-stage execution process in our pipeline, i.e., MM-bert is used for binary identifying, and then glm4 is used for 8-classifying. Among them, `pipeline_with_0shot.py` and `pipeline_with_fewshot.py` are the main entry files for the execution of the pipeline, which represent the zero-shot and few-shot execution processes, respectively. |
+| 2_MT-Text-CNN
+|3_Flan-T5
+|4_MT-MoE-BERT
+| 5_GLM-9B
+| Benchmark_new.csv | 
+
+
 #### dataset and models
 
 | Dataset&Models| Description | Link |
