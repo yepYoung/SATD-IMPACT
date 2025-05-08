@@ -11,7 +11,7 @@ Although the naming of our directories and files already contains the necessary 
 |3_Flan-T5 | This folder contains the code for prompting Flan-T5-XXL and fine-tuning Flan-T5-XL.|
 |4_MT-MoE-BERT | This folder contains the necessary code for training MT-MoE-BERT to form the pipeline and finish the ablation contrast.|
 | 5_GLM-9B | This folder contains the configuration when fine-tuning GLM. |
-| cross-project testset.csv | - |
+| cross-project-testset.csv | The cross-project test set used for testing in the paper. |
 
 
 #### dataset and models
